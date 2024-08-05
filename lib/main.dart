@@ -27,9 +27,16 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        child: const Text('Hello learning Flutter'),
+      backgroundColor: Colors.lightGreen,
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        title: const Text("Learning Flutter"),
+      ),
+      body: const Center(
+        child: Text(
+          "Hello!!",
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }
