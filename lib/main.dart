@@ -120,7 +120,15 @@ class ScaffoldWidgetView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      title: "Learning Flutter",
+      theme: ThemeData(primarySwatch: Colors.green),
+      darkTheme: ThemeData(primarySwatch: Colors.grey),
+      color: Colors.amberAccent,
+      supportedLocales: {
+        const Locale('en', ''),
+      },
+      debugShowCheckedModeBanner: false,
       home: ScaffoldView(),
     );
   }
