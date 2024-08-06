@@ -5,7 +5,8 @@ void main() {
   // runApp(const MyAppNew());
   // runApp(const ContainerView());
   // runApp(const ScaffoldWidgetView());
-  runApp(const BottomNavigationbarWidget());
+  // runApp(const BottomNavigationbarWidget());
+  runApp(ClipRRectView());
 }
 
 class MyApp extends StatelessWidget {
@@ -211,7 +212,7 @@ class NavigationView extends StatefulWidget {
 class _NavigationViewState extends State<NavigationView> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+      TextStyle(fontSize: 50, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       'HOME PAGE',
@@ -233,6 +234,22 @@ class _NavigationViewState extends State<NavigationView> {
     });
   }
 
+  static const List<BottomNavigationBarItem> _widgetBottomItems =
+      <BottomNavigationBarItem>[
+    BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: "Home",
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.bookmark),
+      label: "Courses",
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.contact_mail),
+      label: "Mail",
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -244,24 +261,59 @@ class _NavigationViewState extends State<NavigationView> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bookmark),
-            label: "Courses",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.contact_mail),
-            label: "Mail",
-          ),
-        ],
+        items: _widgetBottomItems,
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
       ),
     );
+  }
+}
+
+class ClipRRectView extends StatelessWidget {
+  // This widget is
+  //the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'ClipOval',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePAGE(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class MyHomePAGE extends StatefulWidget {
+  @override
+  _MyHomePAGEState createState() => _MyHomePAGEState();
+}
+
+class _MyHomePAGEState extends State<MyHomePAGE> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('GeeksforGeeks'),
+          backgroundColor: Colors.green,
+        ),
+        body: Center(
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.network('https://picsum.photos/250?image=9'),
+          ),
+        ));
+  }
+}
+
+class MyClip extends CustomClipper<Rect> {
+  Rect getClip(Size size) {
+    return Rect.fromLTWH(0, 0, 100, 100);
+  }
+
+  bool shouldReclip(oldClipper) {
+    return false;
   }
 }
