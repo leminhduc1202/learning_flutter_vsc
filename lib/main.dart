@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 void main() {
   // runApp(const MyApp());
   // runApp(const MyAppNew());
-  runApp(const ContainerView());
+  // runApp(const ContainerView());
+  runApp(const ScaffoldWidgetView());
 }
 
 class MyApp extends StatelessWidget {
@@ -106,9 +107,73 @@ class ContainerView extends StatelessWidget {
           transform: Matrix4.rotationZ(0.1),
           child: const Text(
             "Hello Container View",
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 20.0),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class ScaffoldWidgetView extends StatelessWidget {
+  const ScaffoldWidgetView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: ScaffoldView(),
+    );
+  }
+}
+
+class ScaffoldView extends StatelessWidget {
+  const ScaffoldView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Scafflod View"),
+      ),
+      body: const Center(
+        child: Text(
+          "Hi Scaffold Widget",
+          style: TextStyle(color: Colors.black, fontSize: 40.0),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        elevation: 10.0,
+        child: const Icon(Icons.add),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: const <Widget>[
+            DrawerHeader(
+              child: Text("List View"),
+              decoration: BoxDecoration(color: Colors.green),
+            ),
+            ListTile(
+              title: Text("Items 1"),
+              leading: Icon(Icons.people),
+            ),
+            ListTile(
+              title: Text("Items 2"),
+              leading: Icon(Icons.mail),
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle), label: "Profile"),
+        ],
+        currentIndex: 0,
+        fixedColor: Colors.green,
+        onTap: (int indexOfitem) {},
       ),
     );
   }
