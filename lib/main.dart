@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 void main() {
   // runApp(const MyApp());
-  runApp(const MyAppNew());
+  // runApp(const MyAppNew());
+  runApp(const ContainerView());
 }
 
 class MyApp extends StatelessWidget {
@@ -82,5 +83,33 @@ class _MyAppState extends State<MyAppNew> {
         ), // Container
       ), // Scaffold
     ); // MaterialApp
+  }
+}
+
+class ContainerView extends StatelessWidget {
+  const ContainerView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Container View"),
+        ),
+        body: Container(
+          height: 200,
+          width: double.infinity,
+          color: Colors.amber,
+          alignment: Alignment.center,
+          margin: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(30),
+          transform: Matrix4.rotationZ(0.1),
+          child: const Text(
+            "Hello Container View",
+            style: TextStyle(fontSize: 20),
+          ),
+        ),
+      ),
+    );
   }
 }
