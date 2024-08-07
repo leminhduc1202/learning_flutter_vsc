@@ -297,28 +297,34 @@ class _MyHomePAGEState extends State<MyHomePAGE> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('GeeksforGeeks'),
-          backgroundColor: Colors.green,
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
+      appBar: AppBar(
+        title: Text('GeeksforGeeks'),
+        backgroundColor: Colors.green,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.network('https://picsum.photos/250?image=9'),
+            ),
+            ClipRect(
+              child: Align(
+                alignment: Alignment.topCenter,
+                heightFactor: 0.5,
                 child: Image.network('https://picsum.photos/250?image=9'),
               ),
-              ClipRect(
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  heightFactor: 0.5,
-                  child: Image.network('https://picsum.photos/250?image=9'),
-                ),
-              )
-            ],
-          ),
-        ));
+            ),
+            Image.network(
+                'https://raw.githubusercontent.com/flutter/assets-for-api-docs/master/packages/diagrams/assets/blend_mode_destination.jpeg',
+                color: Color.fromRGBO(255, 255, 255, 0.5),
+                colorBlendMode: BlendMode.modulate)
+          ],
+        ),
+      ),
+      backgroundColor: Colors.green[50],
+    );
   }
 }
 
