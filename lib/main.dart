@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter_vsc/widget/drawer_view.dart';
+import 'package:learning_flutter_vsc/widget/octolimage_view.dart';
 import 'package:learning_flutter_vsc/widget/richtext_view.dart';
 import 'package:learning_flutter_vsc/widget/rotatedbox_view.dart';
 
@@ -12,7 +13,8 @@ void main() {
   // runApp(ClipRRectView());
   // runApp(DrawerView());
   // runApp(RotatedBoxView());
-  runApp(RichTextView());
+  // runApp(RichTextView());
+  runApp(OctoImageView());
 }
 
 class MyApp extends StatelessWidget {
@@ -45,7 +47,7 @@ class MyHomePage extends StatelessWidget {
           leading: const Icon(Icons.menu),
           backgroundColor: Colors.green,
           title: const Text(
-            "GeeksforGeeks",
+            "Learning Flutter",
             textAlign: TextAlign.start,
           ),
         ), // AppBar
@@ -80,7 +82,7 @@ class _MyAppState extends State<MyAppNew> {
           leading: const Icon(Icons.menu),
           backgroundColor: Colors.green,
           title: const Text(
-            "GeeksforGeeks",
+            "Learning Flutter",
             textAlign: TextAlign.start,
           ),
         ), // AppBar
@@ -260,7 +262,7 @@ class _NavigationViewState extends State<NavigationView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('GeeksForGeeks'),
+        title: const Text('Learning Flutter'),
         backgroundColor: Colors.green,
       ),
       body: Center(
@@ -302,7 +304,7 @@ class _MyHomePAGEState extends State<MyHomePAGE> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('GeeksforGeeks'),
+        title: Text('Learning Flutter'),
         backgroundColor: Colors.green,
       ),
       body: Center(
