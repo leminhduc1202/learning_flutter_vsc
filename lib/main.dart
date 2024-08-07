@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter_vsc/widget/drawer_view.dart';
 
 void main() {
   // runApp(const MyApp());
@@ -6,7 +7,8 @@ void main() {
   // runApp(const ContainerView());
   // runApp(const ScaffoldWidgetView());
   // runApp(const BottomNavigationbarWidget());
-  runApp(ClipRRectView());
+  // runApp(ClipRRectView());
+  runApp(DrawerView());
 }
 
 class MyApp extends StatelessWidget {
