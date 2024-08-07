@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter_vsc/widget/drawer_view.dart';
+import 'package:learning_flutter_vsc/widget/richtext_view.dart';
 import 'package:learning_flutter_vsc/widget/rotatedbox_view.dart';
 
 void main() {
@@ -10,7 +11,8 @@ void main() {
   // runApp(const BottomNavigationbarWidget());
   // runApp(ClipRRectView());
   // runApp(DrawerView());
-  runApp(RotatedBoxView());
+  // runApp(RotatedBoxView());
+  runApp(RichTextView());
 }
 
 class MyApp extends StatelessWidget {
