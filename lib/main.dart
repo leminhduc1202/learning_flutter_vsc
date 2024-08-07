@@ -7,8 +7,8 @@ void main() {
   // runApp(const ContainerView());
   // runApp(const ScaffoldWidgetView());
   // runApp(const BottomNavigationbarWidget());
-  // runApp(ClipRRectView());
-  runApp(DrawerView());
+  runApp(ClipRRectView());
+  // runApp(DrawerView());
 }
 
 class MyApp extends StatelessWidget {
@@ -302,9 +302,21 @@ class _MyHomePAGEState extends State<MyHomePAGE> {
           backgroundColor: Colors.green,
         ),
         body: Center(
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.network('https://picsum.photos/250?image=9'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.network('https://picsum.photos/250?image=9'),
+              ),
+              ClipRect(
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  heightFactor: 0.5,
+                  child: Image.network('https://picsum.photos/250?image=9'),
+                ),
+              )
+            ],
           ),
         ));
   }
