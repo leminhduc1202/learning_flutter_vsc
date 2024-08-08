@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter_vsc/ui_components/carousel_slider_view.dart';
+import 'package:learning_flutter_vsc/ui_components/progress_indicators_component.dart';
 import 'package:learning_flutter_vsc/ui_components/staggered_grid_view_component.dart';
 import 'package:learning_flutter_vsc/widget/drawer_view.dart';
 import 'package:learning_flutter_vsc/widget/octolimage_view.dart';
@@ -18,7 +19,8 @@ void main() {
   // runApp(RichTextView());
   // runApp(OctoImageView());
   // runApp(const CarouselSliderView());
-  runApp(const StaggeredGridViewUI());
+  // runApp(const StaggeredGridViewUI());
+  runApp(const ProgressIndicatorsComponent());
 }
 
 class MyApp extends StatelessWidget {
