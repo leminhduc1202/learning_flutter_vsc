@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:octo_image/octo_image.dart';
 
 class ProgressIndicatorsComponent extends StatelessWidget {
   const ProgressIndicatorsComponent({super.key});
