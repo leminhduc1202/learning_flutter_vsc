@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter_vsc/ui_components/carousel_slider_view.dart';
 import 'package:learning_flutter_vsc/widget/drawer_view.dart';
 import 'package:learning_flutter_vsc/widget/octolimage_view.dart';
 import 'package:learning_flutter_vsc/widget/richtext_view.dart';
@@ -14,7 +15,8 @@ void main() {
   // runApp(DrawerView());
   // runApp(RotatedBoxView());
   // runApp(RichTextView());
-  runApp(OctoImageView());
+  // runApp(OctoImageView());
+  runApp(const CarouselSliderView());
 }
 
 class MyApp extends StatelessWidget {

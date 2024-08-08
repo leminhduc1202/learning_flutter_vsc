@@ -8,6 +8,7 @@ class OctoImageView extends StatelessWidget {
       title: 'OctoImage',
       theme: ThemeData(),
       home: OctoImagePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
