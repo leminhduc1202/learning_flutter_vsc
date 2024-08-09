@@ -20,7 +20,7 @@ class TabBarDemo extends StatelessWidget {
               title: const Text("Icon component"),
               backgroundColor: Colors.amber,
             ),
-            body: const TabBarView(
+            body: TabBarView(
               children: [
                 Icon(Icons.music_note, size: 100),
                 Icon(Icons.music_video, color: Colors.blue, size: 100),
@@ -31,10 +31,32 @@ class TabBarDemo extends StatelessWidget {
                   size: 300,
                   semanticLabel: 'Star',
                 ),
-                Icon(
-                  Icons.email,
-                  size: 100,
-                ),
+                Column(
+                  children: [
+                    Icon(
+                      Icons.email,
+                      size: 100,
+                    ),
+                    Expanded(
+                      child: TextButton(
+                        child: Container(
+                          color: Colors.green,
+                          padding: const EdgeInsets.all(14),
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
+                    Expanded(
+                      child: TextButton(
+                        child: Container(
+                          color: Colors.amber,
+                          padding: const EdgeInsets.all(14),
+                        ),
+                        onPressed: () {},
+                      ),
+                    )
+                  ],
+                )
               ],
             ),
           )),
