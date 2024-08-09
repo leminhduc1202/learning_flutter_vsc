@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter_vsc/ui_components/alert_dialog_box_component.dart';
+import 'package:learning_flutter_vsc/ui_components/icon_component.dart';
 
 void main() {
   // runApp(const MyApp());
@@ -15,7 +16,8 @@ void main() {
   // runApp(const CarouselSliderView());
   // runApp(const StaggeredGridViewUI());
   // runApp(const ProgressIndicatorsComponent());
-  runApp(const AlertDialogBox());
+  // runApp(const AlertDialogBox());
+  runApp(const TabBarDemo());
 }
 
 class MyApp extends StatelessWidget {
