@@ -32,7 +32,8 @@ dependencies:
     sdk: flutter
   octo_image: ^2.1.0
   carousel_slider: ^4.2.1
-
+  analog_clock:
+  flutter_analog_clock: ^1.0.3
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6

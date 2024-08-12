@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter_vsc/ui_components/alert_dialog_box_component.dart';
+import 'package:learning_flutter_vsc/ui_components/analog_clock_component.dart';
 import 'package:learning_flutter_vsc/ui_components/icon_component.dart';
 
 void main() {
@@ -17,7 +18,8 @@ void main() {
   // runApp(const StaggeredGridViewUI());
   // runApp(const ProgressIndicatorsComponent());
   // runApp(const AlertDialogBox());
-  runApp(const TabBarDemo());
+  // runApp(const TabBarDemo());
+  runApp(const AnalogClockComponent());
 }
 
 class MyApp extends StatelessWidget {
