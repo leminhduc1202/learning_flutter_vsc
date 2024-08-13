@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learning_flutter_vsc/ui_components/alert_dialog_box_component.dart';
 import 'package:learning_flutter_vsc/ui_components/analog_clock_component.dart';
 import 'package:learning_flutter_vsc/ui_components/icon_component.dart';
+import 'package:learning_flutter_vsc/ui_components/video_player_component.dart';
 
 void main() {
   // runApp(const MyApp());
@@ -19,7 +20,8 @@ void main() {
   // runApp(const ProgressIndicatorsComponent());
   // runApp(const AlertDialogBox());
   // runApp(const TabBarDemo());
-  runApp(const AnalogClockComponent());
+  // runApp(const AnalogClockComponent());
+  runApp(const VideoPlayerApp());
 }
 
 class MyApp extends StatelessWidget {
