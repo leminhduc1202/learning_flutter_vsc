@@ -8,7 +8,8 @@ class ExpansionView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: "Expansion Component",
-      home: ExpansionHomeView(title: "Expansion View"),
+      home: DefaultTabController(
+          length: 4, child: ExpansionHomeView(title: "Expansion View")),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -34,8 +35,14 @@ class _ExpansionHomeViewState extends State<ExpansionHomeView> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        bottom: const TabBar(tabs: [
+          Tab(icon: Icon(Icons.music_video)),
+          Tab(icon: Icon(Icons.camera_alt)),
+          Tab(icon: Icon(Icons.grade)),
+          Tab(icon: Icon(Icons.email)),
+        ]),
       ),
-      body: ListView(children: <Widget>[
+      body: TabBarView(children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12.0),
           child: ExpansionTileCard(
