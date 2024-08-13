@@ -9,7 +9,7 @@ class ExpansionView extends StatelessWidget {
     return const MaterialApp(
       title: "Expansion Component",
       home: DefaultTabController(
-          length: 4, child: ExpansionHomeView(title: "Expansion View")),
+          length: 5, child: ExpansionHomeView(title: "Expansion View")),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -36,6 +36,7 @@ class _ExpansionHomeViewState extends State<ExpansionHomeView> {
       appBar: AppBar(
         title: Text(widget.title),
         bottom: const TabBar(tabs: [
+          Tab(icon: Icon(Icons.music_note_outlined)),
           Tab(icon: Icon(Icons.music_video)),
           Tab(icon: Icon(Icons.camera_alt)),
           Tab(icon: Icon(Icons.grade)),
@@ -43,6 +44,62 @@ class _ExpansionHomeViewState extends State<ExpansionHomeView> {
         ]),
       ),
       body: TabBarView(children: [
+        Container(
+          margin: const EdgeInsets.symmetric(vertical: 20.0),
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              Container(
+                height: 240.0,
+                width: 240.0,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                        'images/gal_gadot.jpg'),
+                    fit: BoxFit.fill,
+                  ),
+                  shape: BoxShape.rectangle,
+                ),
+              ),
+              Container(
+                height: 480.0,
+                width: 240.0,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                        'images/gal_gadot_1.jpg'),
+                    fit: BoxFit.fill,
+                  ),
+                  shape: BoxShape.rectangle,
+                ),
+              ),
+              Container(
+                height: 480.0,
+                width: 240.0,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                        'images/gal_gadot_2.webp'),
+                    fit: BoxFit.fill,
+                  ),
+                  shape: BoxShape.rectangle,
+                ),
+              ),
+              Container(
+                height: 240.0,
+                width: 240.0,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                        'images/gal_gadot_3.webp'),
+                    fit: BoxFit.fill,
+                  ),
+                  shape: BoxShape.rectangle,
+                ),
+              ),
+            ],
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12.0),
           child: ExpansionTileCard(
