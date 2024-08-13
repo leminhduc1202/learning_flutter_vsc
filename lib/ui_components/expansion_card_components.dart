@@ -1,5 +1,6 @@
 import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class ExpansionView extends StatelessWidget {
   const ExpansionView({super.key});
@@ -9,7 +10,7 @@ class ExpansionView extends StatelessWidget {
     return const MaterialApp(
       title: "Expansion Component",
       home: DefaultTabController(
-          length: 5, child: ExpansionHomeView(title: "Expansion View")),
+          length: 7, child: ExpansionHomeView(title: "Expansion View")),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -29,6 +30,8 @@ class _ExpansionHomeViewState extends State<ExpansionHomeView> {
   final GlobalKey<ExpansionTileCardState> cardB = GlobalKey();
   final GlobalKey<ExpansionTileCardState> cardC = GlobalKey();
   final GlobalKey<ExpansionTileCardState> cardD = GlobalKey();
+  SfRangeValues _values = const SfRangeValues(40.0, 80.0);
+  double _value = 40.0;
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +39,8 @@ class _ExpansionHomeViewState extends State<ExpansionHomeView> {
       appBar: AppBar(
         title: Text(widget.title),
         bottom: const TabBar(tabs: [
+          Tab(icon: Icon(Icons.safety_check)),
+          Tab(icon: Icon(Icons.library_books)),
           Tab(icon: Icon(Icons.music_note_outlined)),
           Tab(icon: Icon(Icons.music_video)),
           Tab(icon: Icon(Icons.camera_alt)),
@@ -44,6 +49,36 @@ class _ExpansionHomeViewState extends State<ExpansionHomeView> {
         ]),
       ),
       body: TabBarView(children: [
+        SfSlider.vertical(
+          min: 0.0,
+          max: 100.0,
+          value: _value,
+          interval: 10,
+          showTicks: true,
+          showLabels: true,
+          enableTooltip: true,
+          minorTicksPerInterval: 1,
+          onChanged: (dynamic value) {
+            setState(() {
+              _value = value;
+            });
+          },
+        ),
+        SfRangeSlider(
+          min: 0.0,
+          max: 100.0,
+          values: _values,
+          interval: 10,
+          showTicks: true,
+          showLabels: true,
+          enableTooltip: true,
+          minorTicksPerInterval: 1,
+          onChanged: (SfRangeValues values){
+            setState(() {
+              _values = values;
+            });
+          },
+        ),
         Container(
           margin: const EdgeInsets.symmetric(vertical: 20.0),
           child: ListView(
@@ -102,7 +137,8 @@ class _ExpansionHomeViewState extends State<ExpansionHomeView> {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12.0),
-          child: ExpansionTileCard(
+          child:
+          ExpansionTileCard(
             key: cardA,
             leading: const CircleAvatar(child: Text('A')),
             title: const Text('Tap to Expand!'),
