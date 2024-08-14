@@ -86,7 +86,15 @@ class _SlidableViewState extends State<SlidableView>
 
               // The child of the Slidable is what the user sees when the
               // component is not dragged.
-              child: const ListTile(title: Text('Slide me 01')),
+              child: const ListTile(
+                title: Text('Slide me',
+                    style: TextStyle(
+                      fontFamily: "GreyQo",
+                      fontSize: 24.0,
+                      color: Colors.purple,
+                      fontWeight: FontWeight.bold
+                    )),
+              ),
             ),
             const Divider(
               thickness: 1.0,
@@ -150,9 +158,10 @@ class _SlidableViewState extends State<SlidableView>
               // component is not dragged.
               child: const ListTile(title: Text('Slide me 02',
               style: TextStyle(
+                fontFamily: "segoesc",
                 fontSize: 24.0,
                 color: Colors.red,
-                fontWeight: FontWeight.bold
+                fontWeight: FontWeight.w900
               ),)),
             ),
             const Divider(

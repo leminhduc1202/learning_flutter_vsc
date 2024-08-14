@@ -76,6 +76,18 @@ flutter:
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+    - family: GreyQo
+      fonts:
+        - asset: assets/fonts/GreyQo-Regular.ttf
+    - family: segoesc
+      fonts:
+        - asset: assets/fonts/segoesc.ttf
+
+
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
 
