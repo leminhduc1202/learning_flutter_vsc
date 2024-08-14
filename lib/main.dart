@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter_vsc/ui_components/convex_bottombar_component.dart';
 import 'package:learning_flutter_vsc/ui_components/expansion_card_components.dart';
+import 'package:learning_flutter_vsc/ui_components/skeleton_text_loading_component.dart';
 import 'package:learning_flutter_vsc/ui_components/slidable_component.dart';
 
 void main() {
@@ -23,7 +24,8 @@ void main() {
   // runApp(const VideoPlayerApp());
   // runApp(const ExpansionView());
   // runApp(const ConvexBottomBarComponent());
-  runApp(const SlidableView());
+  // runApp(const SlidableView());
+  runApp(const SkeletonTextLoadingComponent());
 }
 
 class MyApp extends StatelessWidget {
