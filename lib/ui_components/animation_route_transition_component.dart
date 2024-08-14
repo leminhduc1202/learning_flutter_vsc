@@ -22,11 +22,28 @@ class AnimationRouteTransitionHomePage extends StatelessWidget {
         backgroundColor: Colors.black38,
       ),
       body: Center(
-        child: ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).push(_createRoute());
-            },
-            child: const Text("Next Page")),
+        child: Column(
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(_createRoute());
+                },
+                child: const Text("Next Page")),
+            InkWell(
+              onTap: (){
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text("Hello ripple effect"))
+                );
+              },
+              child: Container(
+                padding: const EdgeInsets.all(12.0),
+                color: Colors.green,
+                child: const Text("Button"),
+              ),
+            )
+          ],
+        )
+
       ),
     );
   }
