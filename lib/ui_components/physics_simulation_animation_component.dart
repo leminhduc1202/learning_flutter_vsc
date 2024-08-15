@@ -7,18 +7,40 @@ class PhysicsCardDragDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+          brightness: Brightness.light,
+          primaryColor: Colors.lightBlue[800],
+          fontFamily: "segoesc",
+          textTheme: const TextTheme(
+              displayLarge:
+                  TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+              titleLarge:
+                  TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+              bodyMedium: TextStyle(fontSize: 14.0, fontFamily: "GreyQo"))),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Physics simulation"),
-          backgroundColor: Colors.green,
-        ),
-        body: DraggableCard(
-            child: Container(
-          width: 140,
-          height: 140,
-          decoration: const BoxDecoration(color: Colors.green),
-        )),
-      ),
+          appBar: AppBar(
+            title: const Text("Physics simulation"),
+            backgroundColor: Colors.green,
+          ),
+          body: Column(
+            children: [
+              DraggableCard(
+                  child: Container(
+                width: 140,
+                height: 140,
+                decoration: const BoxDecoration(color: Colors.green),
+              )),
+              Center(
+                child: Container(
+                  color: Theme.of(context).colorScheme.secondary,
+                  child: Text(
+                    'Hello New theme!',
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                ),
+              ),
+            ],
+          )),
     );
   }
 }
