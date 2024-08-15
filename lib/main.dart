@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learning_flutter_vsc/ui_components/animation_route_transition_component.dart';
 import 'package:learning_flutter_vsc/ui_components/convex_bottombar_component.dart';
 import 'package:learning_flutter_vsc/ui_components/expansion_card_components.dart';
+import 'package:learning_flutter_vsc/ui_components/hinge_animation.dart';
 import 'package:learning_flutter_vsc/ui_components/photo_hero_class.dart';
 import 'package:learning_flutter_vsc/ui_components/physics_simulation_animation_component.dart';
 import 'package:learning_flutter_vsc/ui_components/radial_hero_animation.dart';
@@ -37,8 +38,12 @@ void main() {
   //   home: RadialExpansionDemo(),
   //   debugShowCheckedModeBanner: false,
   // ));
+  // runApp(const MaterialApp(
+  //   home: HeroAnimation(),
+  //   debugShowCheckedModeBanner: false,
+  // ));
   runApp(const MaterialApp(
-    home: HeroAnimation(),
+    home: HingeAnimation(),
     debugShowCheckedModeBanner: false,
   ));
 }
