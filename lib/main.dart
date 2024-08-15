@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learning_flutter_vsc/ui_components/animation_route_transition_component.dart';
 import 'package:learning_flutter_vsc/ui_components/convex_bottombar_component.dart';
 import 'package:learning_flutter_vsc/ui_components/expansion_card_components.dart';
+import 'package:learning_flutter_vsc/ui_components/photo_hero_class.dart';
 import 'package:learning_flutter_vsc/ui_components/physics_simulation_animation_component.dart';
 import 'package:learning_flutter_vsc/ui_components/radial_hero_animation.dart';
 import 'package:learning_flutter_vsc/ui_components/skeleton_text_loading_component.dart';
@@ -32,8 +33,12 @@ void main() {
   // runApp(const SkeletonTextLoadingComponent());
   // runApp(const HomeAnimationRoutePage());
   // runApp(const PhysicsCardDragDemo());
+  // runApp(const MaterialApp(
+  //   home: RadialExpansionDemo(),
+  //   debugShowCheckedModeBanner: false,
+  // ));
   runApp(const MaterialApp(
-    home: RadialExpansionDemo(),
+    home: HeroAnimation(),
     debugShowCheckedModeBanner: false,
   ));
 }
