@@ -3,6 +3,7 @@ import 'package:learning_flutter_vsc/ui_components/animation_route_transition_co
 import 'package:learning_flutter_vsc/ui_components/convex_bottombar_component.dart';
 import 'package:learning_flutter_vsc/ui_components/expansion_card_components.dart';
 import 'package:learning_flutter_vsc/ui_components/physics_simulation_animation_component.dart';
+import 'package:learning_flutter_vsc/ui_components/radial_hero_animation.dart';
 import 'package:learning_flutter_vsc/ui_components/skeleton_text_loading_component.dart';
 import 'package:learning_flutter_vsc/ui_components/slidable_component.dart';
 import 'package:learning_flutter_vsc/ui_components/ui_orientation_component.dart';
@@ -30,7 +31,11 @@ void main() {
   // runApp(const SlidableView());
   // runApp(const SkeletonTextLoadingComponent());
   // runApp(const HomeAnimationRoutePage());
-  runApp(const PhysicsCardDragDemo());
+  // runApp(const PhysicsCardDragDemo());
+  runApp(const MaterialApp(
+    home: RadialExpansionDemo(),
+    debugShowCheckedModeBanner: false,
+  ));
 }
 
 class MyApp extends StatelessWidget {
