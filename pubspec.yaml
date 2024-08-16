@@ -51,6 +51,7 @@ dependencies:
   page_transition:
   lazy_load_scrollview:
   shimmer:
+  rive: ^0.11.11
 
 dev_dependencies:
   flutter_test:
