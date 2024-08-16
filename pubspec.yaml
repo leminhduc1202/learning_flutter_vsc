@@ -49,6 +49,7 @@ dependencies:
   google_fonts:
   auto_size_text:
   page_transition:
+  lazy_load_scrollview:
 
 dev_dependencies:
   flutter_test:
