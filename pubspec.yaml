@@ -50,6 +50,7 @@ dependencies:
   auto_size_text:
   page_transition:
   lazy_load_scrollview:
+  shimmer:
 
 dev_dependencies:
   flutter_test:

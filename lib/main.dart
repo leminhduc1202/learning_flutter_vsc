@@ -9,6 +9,7 @@ import 'package:learning_flutter_vsc/ui_components/photo_hero_class.dart';
 import 'package:learning_flutter_vsc/ui_components/physics_simulation_animation_component.dart';
 import 'package:learning_flutter_vsc/ui_components/radial_hero_animation.dart';
 import 'package:learning_flutter_vsc/ui_components/rotate_transition.dart';
+import 'package:learning_flutter_vsc/ui_components/shimmer_loading_view.dart';
 import 'package:learning_flutter_vsc/ui_components/skeleton_text_loading_component.dart';
 import 'package:learning_flutter_vsc/ui_components/slidable_component.dart';
 import 'package:learning_flutter_vsc/ui_components/ui_orientation_component.dart';
@@ -54,7 +55,8 @@ void main() {
   //   debugShowCheckedModeBanner: false,
   // ));
   // runApp(const RotateTransitionView());
-  runApp(const LazyLoadView());
+  // runApp(const LazyLoadView());
+  runApp(const ShimmerLoadingView());
 }
 
 class MyApp extends StatelessWidget {
