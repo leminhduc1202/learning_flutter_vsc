@@ -7,6 +7,7 @@ import 'package:learning_flutter_vsc/ui_components/lottie_animation.dart';
 import 'package:learning_flutter_vsc/ui_components/photo_hero_class.dart';
 import 'package:learning_flutter_vsc/ui_components/physics_simulation_animation_component.dart';
 import 'package:learning_flutter_vsc/ui_components/radial_hero_animation.dart';
+import 'package:learning_flutter_vsc/ui_components/rotate_transition.dart';
 import 'package:learning_flutter_vsc/ui_components/skeleton_text_loading_component.dart';
 import 'package:learning_flutter_vsc/ui_components/slidable_component.dart';
 import 'package:learning_flutter_vsc/ui_components/ui_orientation_component.dart';
@@ -47,10 +48,11 @@ void main() {
   //   home: HingeAnimation(),
   //   debugShowCheckedModeBanner: false,
   // ));
-  runApp(const MaterialApp(
-    home: LottiePage(),
-    debugShowCheckedModeBanner: false,
-  ));
+  // runApp(const MaterialApp(
+  //   home: LottiePage(),
+  //   debugShowCheckedModeBanner: false,
+  // ));
+  runApp(const RotateTransitionView());
 }
 
 class MyApp extends StatelessWidget {

@@ -48,6 +48,7 @@ dependencies:
   lottie:
   google_fonts:
   auto_size_text:
+  page_transition:
 
 dev_dependencies:
   flutter_test:
