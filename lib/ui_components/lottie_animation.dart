@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
@@ -37,6 +38,16 @@ class LottiePageState extends State<LottiePage> {
               "Font google 3",
               style: GoogleFonts.daiBannaSil(
                   textStyle: const TextStyle(fontSize: 36.0)),
+            ),
+            SizedBox(
+              width: 200.0,
+              height: 140.0,
+              child: AutoSizeText(
+                "This text will show in many lines, will auto size fit view!!",
+                style: GoogleFonts.damion(
+                    textStyle: const TextStyle(fontSize: 30.0)),
+                maxLines: 3,
+              ),
             ),
             Lottie.network(
                 'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json',

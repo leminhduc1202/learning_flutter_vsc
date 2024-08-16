@@ -47,6 +47,7 @@ dependencies:
   skeleton_text:
   lottie:
   google_fonts:
+  auto_size_text:
 
 dev_dependencies:
   flutter_test:
