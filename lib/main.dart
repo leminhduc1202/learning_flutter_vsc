@@ -16,6 +16,8 @@ import 'package:learning_flutter_vsc/ui_components/slidable_component.dart';
 import 'package:learning_flutter_vsc/ui_components/sn_progress_dialog_view.dart';
 import 'package:learning_flutter_vsc/ui_components/ui_orientation_component.dart';
 
+import 'forms_gestures/forms_validation.dart';
+
 void main() {
   // runApp(const MyApp());
   // runApp(const MyAppNew());
@@ -63,7 +65,11 @@ void main() {
   //   home: MyRiveAnimation(),
   //   debugShowCheckedModeBanner: false,
   // ));
-  runApp(const SnProgressDialogView());
+  // runApp(const SnProgressDialogView());
+  runApp(const MaterialApp(
+    home: FormValidationView(),
+    debugShowCheckedModeBanner: false,
+  ));
 }
 
 class MyApp extends StatelessWidget {
