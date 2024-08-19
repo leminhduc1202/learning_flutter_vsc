@@ -16,6 +16,7 @@ import 'package:learning_flutter_vsc/ui_components/slidable_component.dart';
 import 'package:learning_flutter_vsc/ui_components/sn_progress_dialog_view.dart';
 import 'package:learning_flutter_vsc/ui_components/ui_orientation_component.dart';
 
+import 'forms_gestures/form_submission_page.dart';
 import 'forms_gestures/forms_validation.dart';
 
 void main() {
@@ -66,8 +67,12 @@ void main() {
   //   debugShowCheckedModeBanner: false,
   // ));
   // runApp(const SnProgressDialogView());
+  // runApp(const MaterialApp(
+  //   home: FormValidationView(),
+  //   debugShowCheckedModeBanner: false,
+  // ));
   runApp(const MaterialApp(
-    home: FormValidationView(),
+    home: FormSubmissionPage(),
     debugShowCheckedModeBanner: false,
   ));
 }
