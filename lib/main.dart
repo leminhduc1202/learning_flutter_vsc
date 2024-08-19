@@ -18,6 +18,7 @@ import 'package:learning_flutter_vsc/ui_components/ui_orientation_component.dart
 
 import 'forms_gestures/form_submission_page.dart';
 import 'forms_gestures/forms_validation.dart';
+import 'forms_gestures/gestures_page.dart';
 
 void main() {
   // runApp(const MyApp());
@@ -71,8 +72,12 @@ void main() {
   //   home: FormValidationView(),
   //   debugShowCheckedModeBanner: false,
   // ));
+  // runApp(const MaterialApp(
+  //   home: FormSubmissionPage(),
+  //   debugShowCheckedModeBanner: false,
+  // ));
   runApp(const MaterialApp(
-    home: FormSubmissionPage(),
+    home: GesturesPage(),
     debugShowCheckedModeBanner: false,
   ));
 }
