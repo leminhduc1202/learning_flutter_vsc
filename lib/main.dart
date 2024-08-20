@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter_vsc/navigation_routing_page/url_web_view.dart';
 import 'package:learning_flutter_vsc/ui_components/animation_route_transition_component.dart';
 import 'package:learning_flutter_vsc/ui_components/convex_bottombar_component.dart';
 import 'package:learning_flutter_vsc/ui_components/expansion_card_components.dart';
@@ -76,10 +77,11 @@ void main() {
   //   home: FormSubmissionPage(),
   //   debugShowCheckedModeBanner: false,
   // ));
-  runApp(const MaterialApp(
-    home: GesturesPage(),
-    debugShowCheckedModeBanner: false,
-  ));
+  // runApp(const MaterialApp(
+  //   home: GesturesPage(),
+  //   debugShowCheckedModeBanner: false,
+  // ));
+  runApp(const UrlWebView());
 }
 
 class MyApp extends StatelessWidget {
