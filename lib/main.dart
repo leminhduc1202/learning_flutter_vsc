@@ -89,6 +89,7 @@ void main() {
       '/': (context) => const HomeRoute(),
       '/second': (context) => const SecondRoute(),
       '/third': (context) => const ThirdRoute(),
+      '/input': (context) => const RetrieveDataFromTextField(),
     },
   )); //MaterialApp
 }

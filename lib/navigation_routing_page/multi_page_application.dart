@@ -1,17 +1,5 @@
 import 'package:flutter/material.dart';
 
-// function to trigger build when the app is run
-void main() {
-  runApp(MaterialApp(
-    initialRoute: '/',
-    routes: {
-      '/': (context) => const HomeRoute(),
-      '/second': (context) => const SecondRoute(),
-      '/third': (context) => const ThirdRoute(),
-    },
-  )); //MaterialApp
-}
-
 class HomeRoute extends StatelessWidget {
   const HomeRoute({super.key});
 
@@ -19,7 +7,7 @@ class HomeRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Geeks for Geeks'),
+        title: const Text('Multi Page'),
         backgroundColor: Colors.green,
       ), // AppBar
       body: Center(
@@ -37,11 +25,70 @@ class HomeRoute extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/third');
               },
+            ),
+            ElevatedButton(
+              child: const Text('Input!'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/input');
+              },
             ), // ElevatedButton
           ], // <Widget>[]
         ), // Column
       ), // Center
     ); // Scaffold
+  }
+}
+
+class RetrieveDataFromTextField extends StatefulWidget {
+  const RetrieveDataFromTextField({super.key});
+
+  @override
+  State<RetrieveDataFromTextField> createState() =>
+      _RetrieveDataFromTextFieldState();
+}
+
+class _RetrieveDataFromTextFieldState extends State<RetrieveDataFromTextField> {
+  late String title;
+  String text = "No Value Entered";
+
+  void _setText() {
+    setState(() {
+      text = title;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Input Screen'),
+        backgroundColor: Colors.green,
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: TextField(
+              decoration: const InputDecoration(labelText: 'Title'),
+              onChanged: (value) => title = value,
+            ),
+          ),
+          const SizedBox(
+            height: 8,
+          ),
+          ElevatedButton(
+              onPressed: _setText,
+              style: ButtonStyle(
+                  elevation: WidgetStateProperty.all(8),
+                  backgroundColor: WidgetStateProperty.all(Colors.green)),
+              child: const Text('Submit')),
+          const SizedBox(
+            height: 20,
+          ),
+          Text(text),
+        ],
+      ),
+    );
   }
 }
 
