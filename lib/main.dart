@@ -20,6 +20,7 @@ import 'package:learning_flutter_vsc/ui_components/ui_orientation_component.dart
 import 'forms_gestures/form_submission_page.dart';
 import 'forms_gestures/forms_validation.dart';
 import 'forms_gestures/gestures_page.dart';
+import 'navigation_routing_page/multi_page_application.dart';
 
 void main() {
   // runApp(const MyApp());
@@ -81,7 +82,15 @@ void main() {
   //   home: GesturesPage(),
   //   debugShowCheckedModeBanner: false,
   // ));
-  runApp(const UrlWebView());
+  // runApp(const UrlWebView());
+  runApp(MaterialApp(
+    initialRoute: '/',
+    routes: {
+      '/': (context) => const HomeRoute(),
+      '/second': (context) => const SecondRoute(),
+      '/third': (context) => const ThirdRoute(),
+    },
+  )); //MaterialApp
 }
 
 class MyApp extends StatelessWidget {
