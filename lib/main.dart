@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter_vsc/navigation_routing_page/avoiding_junk.dart';
 import 'package:learning_flutter_vsc/navigation_routing_page/url_web_view.dart';
 import 'package:learning_flutter_vsc/ui_components/animation_route_transition_component.dart';
 import 'package:learning_flutter_vsc/ui_components/convex_bottombar_component.dart';
@@ -83,15 +84,16 @@ void main() {
   //   debugShowCheckedModeBanner: false,
   // ));
   // runApp(const UrlWebView());
-  runApp(MaterialApp(
-    initialRoute: '/',
-    routes: {
-      '/': (context) => const HomeRoute(),
-      '/second': (context) => const SecondRoute(),
-      '/third': (context) => const ThirdRoute(),
-      '/input': (context) => const RetrieveDataFromTextField(),
-    },
-  )); //MaterialApp
+  // runApp(MaterialApp(
+  //   initialRoute: '/',
+  //   routes: {
+  //     '/': (context) => const HomeRoute(),
+  //     '/second': (context) => const SecondRoute(),
+  //     '/third': (context) => const ThirdRoute(),
+  //     '/input': (context) => const RetrieveDataFromTextField(),
+  //   },
+  // ));
+  runApp(const AvoidingJunk());
 }
 
 class MyApp extends StatelessWidget {
