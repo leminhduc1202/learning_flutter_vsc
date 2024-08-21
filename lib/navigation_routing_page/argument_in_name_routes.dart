@@ -3,6 +3,7 @@ import 'package:learning_flutter_vsc/navigation_routing_page/return_data_from_sc
 import 'package:learning_flutter_vsc/navigation_routing_page/send_data_to_new_screen.dart';
 
 import 'avoiding_junk.dart';
+import 'image_picker_view.dart';
 
 class ArgumentNameRoutes extends StatelessWidget {
   const ArgumentNameRoutes({super.key});
@@ -18,7 +19,9 @@ class ArgumentNameRoutes extends StatelessWidget {
         ReturnDataFromScreen.routeNameReturnData: (context) =>
             const ReturnDataFromScreen(),
         TodosScreen.routeNameTodo: (context) =>
-            TodosScreen()
+            TodosScreen(),
+        ImagePickerView.routeNameImagePicker: (context) =>
+            const ImagePickerView()
       },
       onGenerateRoute: (settings) {
         if (settings.name == PassArgumentsScreen.routeName) {
@@ -106,6 +109,15 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: const Text('Navigate to list task Screen'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  ImagePickerView.routeNameImagePicker,
+                );
+              },
+              child: const Text('Image Picker View'),
             ),
           ],
         ),
