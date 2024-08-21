@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'avoiding_junk.dart';
+
 class ArgumentNameRoutes extends StatelessWidget {
   const ArgumentNameRoutes({super.key});
 
@@ -9,6 +11,8 @@ class ArgumentNameRoutes extends StatelessWidget {
       routes: {
         ExtractArgumentsScreen.routeName: (context) =>
             const ExtractArgumentsScreen(),
+        AvoidingJunk.routeNameLoadData: (context) =>
+            const AvoidingJunk()
       },
       onGenerateRoute: (settings) {
         if (settings.name == PassArgumentsScreen.routeName) {
@@ -69,6 +73,15 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: const Text('Navigate to B Screen'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  AvoidingJunk.routeNameLoadData,
+                );
+              },
+              child: const Text('Navigate to Load data Screen'),
             ),
           ],
         ),

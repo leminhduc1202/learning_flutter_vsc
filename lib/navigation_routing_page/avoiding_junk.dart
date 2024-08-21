@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class AvoidingJunk extends StatelessWidget {
+  static const routeNameLoadData = "/loadData";
   const AvoidingJunk({super.key});
 
   @override
