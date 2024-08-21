@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter_vsc/navigation_routing_page/return_data_from_screen.dart';
 
 import 'avoiding_junk.dart';
 
@@ -12,7 +13,9 @@ class ArgumentNameRoutes extends StatelessWidget {
         ExtractArgumentsScreen.routeName: (context) =>
             const ExtractArgumentsScreen(),
         AvoidingJunk.routeNameLoadData: (context) =>
-            const AvoidingJunk()
+            const AvoidingJunk(),
+        ReturnDataFromScreen.routeNameReturnData: (context) =>
+            const ReturnDataFromScreen()
       },
       onGenerateRoute: (settings) {
         if (settings.name == PassArgumentsScreen.routeName) {
@@ -82,6 +85,15 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: const Text('Navigate to Load data Screen'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  ReturnDataFromScreen.routeNameReturnData,
+                );
+              },
+              child: const Text('Navigate to Return Data Screen'),
             ),
           ],
         ),
