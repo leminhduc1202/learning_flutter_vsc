@@ -21,6 +21,7 @@ import 'package:learning_flutter_vsc/ui_components/ui_orientation_component.dart
 import 'forms_gestures/form_submission_page.dart';
 import 'forms_gestures/forms_validation.dart';
 import 'forms_gestures/gestures_page.dart';
+import 'navigation_routing_page/argument_in_name_routes.dart';
 import 'navigation_routing_page/multi_page_application.dart';
 
 void main() {
@@ -93,7 +94,8 @@ void main() {
   //     '/input': (context) => const RetrieveDataFromTextField(),
   //   },
   // ));
-  runApp(const AvoidingJunk());
+  // runApp(const AvoidingJunk());
+  runApp(const ArgumentNameRoutes());
 }
 
 class MyApp extends StatelessWidget {
