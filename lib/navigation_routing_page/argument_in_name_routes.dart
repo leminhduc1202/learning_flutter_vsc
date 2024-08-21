@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter_vsc/navigation_routing_page/return_data_from_screen.dart';
+import 'package:learning_flutter_vsc/navigation_routing_page/send_data_to_new_screen.dart';
 
 import 'avoiding_junk.dart';
 
@@ -15,7 +16,9 @@ class ArgumentNameRoutes extends StatelessWidget {
         AvoidingJunk.routeNameLoadData: (context) =>
             const AvoidingJunk(),
         ReturnDataFromScreen.routeNameReturnData: (context) =>
-            const ReturnDataFromScreen()
+            const ReturnDataFromScreen(),
+        TodosScreen.routeNameTodo: (context) =>
+            TodosScreen()
       },
       onGenerateRoute: (settings) {
         if (settings.name == PassArgumentsScreen.routeName) {
@@ -94,6 +97,15 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: const Text('Navigate to Return Data Screen'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  TodosScreen.routeNameTodo,
+                );
+              },
+              child: const Text('Navigate to list task Screen'),
             ),
           ],
         ),
