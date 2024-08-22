@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter_vsc/advance_concepts/fab_speed_dial_view.dart';
 import 'package:learning_flutter_vsc/advance_concepts/mail_sms_view.dart';
 import 'package:learning_flutter_vsc/navigation_routing_page/avoiding_junk.dart';
 import 'package:learning_flutter_vsc/navigation_routing_page/url_web_view.dart';
@@ -102,7 +103,8 @@ Future<void> main() async {
   // WidgetsFlutterBinding.ensureInitialized();
   // await Firebase.initializeApp();
   // runApp(const ReadAndWriteDataStorageFirebase());
-  runApp(const MailAndSmsView());
+  // runApp(const MailAndSmsView());
+  runApp(const FabSpeedStatefulView());
 }
 
 class MyApp extends StatelessWidget {
