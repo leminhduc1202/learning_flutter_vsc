@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter_vsc/advance_concepts/mail_sms_view.dart';
 import 'package:learning_flutter_vsc/navigation_routing_page/avoiding_junk.dart';
 import 'package:learning_flutter_vsc/navigation_routing_page/url_web_view.dart';
 import 'package:learning_flutter_vsc/ui_components/animation_route_transition_component.dart';
@@ -98,9 +99,10 @@ Future<void> main() async {
   // ));
   // runApp(const AvoidingJunk());
   // runApp(const ArgumentNameRoutes());
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(const ReadAndWriteDataStorageFirebase());
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
+  // runApp(const ReadAndWriteDataStorageFirebase());
+  runApp(const MailAndSmsView());
 }
 
 class MyApp extends StatelessWidget {

@@ -41,4 +41,16 @@
             <data android:mimeType="text/plain"/>
         </intent>
     </queries>
+    <queries>
+        <!-- If your app checks for SMS support -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="sms" />
+        </intent>
+        <!-- If your app checks for mail support -->
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <data android:scheme="mailto" />
+        </intent>
+    </queries>
 </manifest>
