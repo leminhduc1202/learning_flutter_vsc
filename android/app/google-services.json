@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "488002303012",
+    "firebase_url": "https://diablo-immortal-character-default-rtdb.firebaseio.com",
+    "project_id": "diablo-immortal-character",
+    "storage_bucket": "diablo-immortal-character.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488002303012:android:10f009cc42af9b291854b1",
+        "android_client_info": {
+          "package_name": "com.example.learning_flutter_vsc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488002303012-i3js481poie70dkl42cktno9jghvqmiu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFJyx00BbDctiegq7nj9FuV85nq-bzBAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488002303012-i3js481poie70dkl42cktno9jghvqmiu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488002303012:android:bd953771f50407091854b1",
+        "android_client_info": {
+          "package_name": "com.mdapp.diabloimmortalcharacter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488002303012-i3js481poie70dkl42cktno9jghvqmiu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFJyx00BbDctiegq7nj9FuV85nq-bzBAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488002303012-i3js481poie70dkl42cktno9jghvqmiu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
