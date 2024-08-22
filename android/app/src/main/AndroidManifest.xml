@@ -49,8 +49,12 @@
         </intent>
         <!-- If your app checks for mail support -->
         <intent>
-            <action android:name="android.intent.action.SEND" />
+            <action android:name="android.intent.action.SENDTO" />
             <data android:scheme="mailto" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="tel" />
         </intent>
     </queries>
 </manifest>

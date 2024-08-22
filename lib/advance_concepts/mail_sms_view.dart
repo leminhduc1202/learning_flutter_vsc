@@ -24,6 +24,15 @@ _sendingSMS() async {
   }
 }
 
+_makingPhoneCall() async {
+  var url = Uri.parse("tel:0869238644");
+  if (await canLaunchUrl(url)) {
+    await launchUrl(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 class MailAndSmsView extends StatelessWidget {
   const MailAndSmsView({super.key});
 
@@ -81,6 +90,26 @@ class MailAndSmsView extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: _sendingSMS,
+                  style: ButtonStyle(
+                    padding: WidgetStateProperty.all(const EdgeInsets.all(5.0)),
+                    textStyle: WidgetStateProperty.all(
+                      const TextStyle(color: Colors.black),
+                    ),
+                  ),
+                  child: const Text('Here'),
+                ),
+                const Text(
+                  'Make call',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    color: Colors.green,
+                  ),
+                ),// Elevat
+                Container(
+                  height: 10.0,
+                ),
+                ElevatedButton(
+                  onPressed: _makingPhoneCall,
                   style: ButtonStyle(
                     padding: WidgetStateProperty.all(const EdgeInsets.all(5.0)),
                     textStyle: WidgetStateProperty.all(
