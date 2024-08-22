@@ -18,13 +18,15 @@ import 'package:learning_flutter_vsc/ui_components/slidable_component.dart';
 import 'package:learning_flutter_vsc/ui_components/sn_progress_dialog_view.dart';
 import 'package:learning_flutter_vsc/ui_components/ui_orientation_component.dart';
 
+import 'advance_concepts/read_write_on_firebase.dart';
 import 'forms_gestures/form_submission_page.dart';
 import 'forms_gestures/forms_validation.dart';
 import 'forms_gestures/gestures_page.dart';
 import 'navigation_routing_page/argument_in_name_routes.dart';
 import 'navigation_routing_page/multi_page_application.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+Future<void> main() async {
   // runApp(const MyApp());
   // runApp(const MyAppNew());
   // runApp(const ContainerView());
@@ -95,7 +97,10 @@ void main() {
   //   },
   // ));
   // runApp(const AvoidingJunk());
-  runApp(const ArgumentNameRoutes());
+  // runApp(const ArgumentNameRoutes());
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const ReadAndWriteDataStorageFirebase());
 }
 
 class MyApp extends StatelessWidget {

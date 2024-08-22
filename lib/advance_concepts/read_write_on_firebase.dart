@@ -6,14 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path/path.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(const MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ReadAndWriteDataStorageFirebase extends StatelessWidget {
+  const ReadAndWriteDataStorageFirebase({super.key});
 
   @override
   Widget build(BuildContext context) {
